@@ -41,34 +41,35 @@ include "../conexao.php"
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo "                           
-            <table> 
+            <table style='border: 3px solid #3f7e04 ;'> 
                 <tr>
                     <td>Nome:</td>
-                    <td><label>" . $row['nome'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['nome'] . "</label></td>
                 </tr>
+ 
                 <tr>
                     <td>E-mail:</td>
-                    <td><label>" . $row['email'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['email'] . "</label></td>
                 </tr>
                 <tr>
                     <td>Telefone:</td>
-                    <td><label>" . $row['telefone'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['telefone'] . "</label></td>
                 </tr>
                 <tr>
                     <td>Rua:</td>
-                    <td><label>" . $row['endereco'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['endereco'] . "</label></td>
                 </tr>
                 <tr>
                     <td>Numero:</td>
-                    <td><label>" . $row['num'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['num'] . "</label></td>
                 </tr>
                 <tr>
                     <td>Bairro:</td>
-                    <td><label>" . $row['bairro'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['bairro'] . "</label></td>
                 </tr>
                 <tr>
                     <td>Cidade:</td>
-                    <td><label>" . $row['cidade'] . "</label></td>
+                    <td style='border: 2px solid #7eff05;padding: 5px;'><label>" . $row['cidade'] . "</label></td>
                 </tr>
             </table>";
                             
