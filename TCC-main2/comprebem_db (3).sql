@@ -114,7 +114,7 @@ CREATE TABLE `produtos_vendidos` (
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11)PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `email` varchar(50) NOT NULL,
   `senha` varchar(32) NOT NULL,
@@ -169,14 +169,7 @@ ALTER TABLE `produtos_vendidos`
   ADD KEY `FK_PRODUTOS_VENDIDOS_1` (`id_pedido`),
   ADD KEY `FK_PRODUTOS_VENDIDOS_2` (`id_produto`);
 
---
--- Índices para tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
@@ -197,11 +190,6 @@ ALTER TABLE `produtos`
 ALTER TABLE `produtos_vendidos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para despejos de tabelas
@@ -225,5 +213,5 @@ ALTER TABLE `produtos`
 ALTER TABLE `produtos_vendidos`
   ADD CONSTRAINT `FK_PRODUTOS_VENDIDOS_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_PRODUTOS_VENDIDOS_2` FOREIGN KEY (`id_produto`) REFERENCES `produtos` (`id`) ON DELETE CASCADE;
-COMMIT;
+
 
